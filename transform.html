@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transform</title>
+    <link rel="stylesheet" href="reset.min.css">
+    <style>
+       .box{
+          margin: 20px auto;
+          width: 200px;
+           height: 200px;
+           background: url("img/apple_1_bigger.jpg") no-repeat;
+           background-size: 100% 100%;
+           transform-origin: left top 0;
+           transform:translateX(100px) translateY(200px)
+                     rotate(45deg) scale(1.5);
+       }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+</body>
+</html>

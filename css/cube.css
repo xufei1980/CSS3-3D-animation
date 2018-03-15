@@ -1,0 +1,70 @@
+@import "reset.min.css";
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -284px 0 0 -160px;
+  width: 320px;
+  height: 568px;
+  background-color: lightcyan;
+}
+.cubeBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -127.5px 0 0 -127.5px;
+  width: 255px;
+  height: 255px;
+}
+.cubeBox li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.cubeBox li img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.main {
+  perspective: 2000px;
+}
+.main .cubeBox {
+  transform-style: preserve-3d;
+  transform: scale(0.6) rotateX(-45deg) rotateY(45deg);
+  animation: cubeMove 10s linear 0s infinite both;
+}
+.main .cubeBox li:nth-child(1) {
+  transform: translateZ(127.5px);
+}
+.main .cubeBox li:nth-child(2) {
+  transform: translateZ(-127.5px) rotateY(180deg);
+}
+.main .cubeBox li:nth-child(3) {
+  transform: translateX(-127.5px) rotateY(-90deg);
+}
+.main .cubeBox li:nth-child(4) {
+  transform: translateX(127.5px) rotateY(90deg);
+}
+.main .cubeBox li:nth-child(5) {
+  transform: translateY(-127.5px) rotateX(90deg);
+}
+.main .cubeBox li:nth-child(6) {
+  transform: translateY(127.5px) rotateX(-90deg);
+}
+@keyframes cubeMove {
+  0%,
+  100% {
+    transform: scale(0.6) rotateX(-45deg) rotateY(45deg);
+  }
+  50% {
+    transform: scale(0.6) rotateX(135deg) rotateY(-135deg);
+  }
+}
